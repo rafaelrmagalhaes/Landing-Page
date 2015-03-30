@@ -1,0 +1,337 @@
+/*-------------------------------------------------------------
+		Preset COlor: #3598DC & rgba(53, 152, 220, 0.8) ;
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+3.1 Theme Element
+--------------------------------------------------------------*/
+/*-- Loader --*/
+.loading-page .loading-progress {
+  background:#3598DC;
+}
+
+/*-- Link --*/
+a:hover{
+	color: #3598DC;
+}
+
+/*-- Button --*/
+a.default{
+	background: #126589;
+	border: 2px solid #fefefe;
+}
+
+/*-- Section Title area --*/
+.section_title_area:after{
+	background: #686e7c;	
+}
+
+/*-- Sidebar Widget Title --*/
+.sidebar_widget h2.widget_title:after{
+	background: #3598DC;
+}
+
+/*-- Back to top --*/
+.back_top{
+	color: #3598DC;
+}
+
+/*-- Load more button --*/
+.load-posts:hover{
+	color: #3598DC;
+	border-color: #3598DC;
+}
+
+/*--------------------------------------------------------------
+5.1 Navigation
+--------------------------------------------------------------*/
+#main_menu2 .navbar-nav>li:hover a,
+#header2 .navbar-default .navbar-nav>.active>a,
+#main_menu .navbar-nav>li:hover a,
+#header .navbar-default .navbar-nav>.active>a{
+	color: #3598DC;
+}
+
+#main_menu2 ul li.contact_menu{
+	background: #3598DC;
+}
+
+/*--------------------------------------------------------------
+6.0 Slider
+--------------------------------------------------------------*/
+.carousel-content h1{
+	background: transparent;
+}
+
+/*--------------------------------------------------------------
+7.0 Main Feature
+--------------------------------------------------------------*/
+.top_blog > div.top_blog_item_content:hover h2{
+	color: #3598DC;
+}
+.top_blog > div.top_blog_item_content:hover  .learn_more,
+.top_blog > div.top_blog_item_content:hover h2:after{
+	background: #3598DC;
+}
+.top_blog > .top_blog_item_image .top_blog_img_overlay .overlay {
+	background: rgba(53, 152, 220, 0.8);
+}
+ul.image_list li:hover{
+	border-color: #3598DC;
+}
+ul.image_list li:before,
+ul.image_list li:after {
+	background: #3598DC;
+}
+/*--------------------------------------------------------------
+8.0 Feature
+--------------------------------------------------------------*/
+.feature_item:hover{
+	border-bottom-color: #3598DC;
+}
+.feature_item:hover h2:after{
+	background: #3598DC;
+}
+.feature_item:hover h2{
+	color: #3598DC;	
+}
+.feature_item i{
+	color: #3598DC;
+}
+
+/*--------------------------------------------------------------
+10.0 Formula
+--------------------------------------------------------------*/
+#formula{
+	background:#3598DC url('../images/formula_bg2.png') no-repeat fixed center center;
+}
+ul.formula_content_left li:before{
+	background: #f89e35;
+}
+ul.formula_content_right li:before{
+	background: #f89e35;
+}
+#formula h3.section_subtitle{
+	color: #cfecff;
+}
+/*--------------------------------------------------------------
+11.0 Facts
+--------------------------------------------------------------*/
+.facts_icon_shape .facts_icon{
+	color: #3598DC;
+}
+
+/*-- Count Number --*/
+.fact-number{
+	color: #3598DC;
+}
+
+/*--------------------------------------------------------------
+12.0 Gallery
+--------------------------------------------------------------*/
+ul.gallery_filter li:hover,
+ul.gallery_filter li.active{
+	border: 1px solid #3598DC;
+	color: #3598DC;
+}
+
+/*-- Gallery Item --*/
+.mix .gallery_hover a{
+	color: #3598DC;	
+}
+
+/*--------------------------------------------------------------
+13.0 Services
+--------------------------------------------------------------*/
+.services_item:hover .service_body h2{
+	color: #3598DC;
+}
+.services_item:hover .service_body h2:after{
+	background: #3598DC;
+}
+.services_item:hover .service_body{
+	border-bottom: 3px solid #3598DC;
+}
+.services_item .service_body a:hover{
+	color: #3598DC;
+}
+.services_item:hover .service_body a {
+	color: #3598DC;
+}
+.services_item .service_img_overlay .overlay{
+	background: rgba(53, 152, 220, 0.8);
+}
+
+/*--------------------------------------------------------------
+14.0 Video
+--------------------------------------------------------------*/
+.video-bg {
+	background: url(../images/video2.png) center;
+}
+
+/*--------------------------------------------------------------
+15.0 Pricing
+--------------------------------------------------------------*/
+.pricing_item:hover:before{
+	border-color: #3598DC transparent transparent #3598DC;
+}
+.pricing_item:hover ul.pricing_table li:last-child a{
+	background: #3598DC;
+}
+.pricing_item:hover ul.pricing_table li:first-child,
+.pricing_item:hover ul.pricing_table li:nth-child(2) .pricing{
+	color: #3598DC;
+}
+
+/*--------------------------------------------------------------
+16.0 Twitter
+--------------------------------------------------------------*/
+section#twitter{
+	background: #3598DC url('../images/partner2.png') no-repeat center center;
+}
+.tweets_feed a{
+	color: #cfecff;
+}
+.tweets_feed a:hover{
+	color: #ffffff;
+}
+section#contato{
+	background: #01507C;
+}
+/*--------------------------------------------------------------
+17.0 Team
+--------------------------------------------------------------*/
+.team_item:hover .team_body{
+	border-bottom: 3px solid #3598DC;
+}
+.team_item:hover .team_body h2{
+	color: #3598DC;
+}
+.team_item:hover .team_body ul li,
+.team_item .team_body ul li:hover{
+	background: #3598DC;
+}
+.team_item  .team_img_overlay .overlay{
+	background: rgba(53, 152, 220, 0.8);
+}
+
+/*--------------------------------------------------------------
+18.0 Blog update
+--------------------------------------------------------------*/
+.blog_update_item:hover{
+	border-bottom: 3px solid #3598DC;
+}
+.blog_body_item:hover h2{
+	color: #3598DC;
+}
+.blog_body_item:hover h2:after{
+	background: #3598DC;
+}
+.blog_body_item ul.blog_item_tags li:hover{
+	color: #3598DC;
+	border: 1px solid #3598DC;
+}
+.blog_body_item ul.blog_item_tags li:hover a{
+	color: #3598DC;
+}
+.blog_update_item  .blog_update_item_overlay .overlay{
+	background: rgba(53, 152, 220, 0.8);
+}
+
+/*--------------------------------------------------------------
+19.0 Client
+--------------------------------------------------------------*/
+.testimonial_body .name{
+	background: #3598DC;
+}
+.testimonial_body .name:after{
+	border-color: #1D7AB7 transparent transparent #1D7AB7;
+}
+.testimonial_body .name:before{
+	border-color: #1D7AB7 #1D7AB7 transparent transparent;
+}
+
+/*--------------------------------------------------------------
+20.0 Partner
+--------------------------------------------------------------*/
+section#partner{
+	background: #3598DC url('../images/partner.png') repeat scroll 0% 0%;
+}
+
+/*--------------------------------------------------------------
+21.0 Contact
+--------------------------------------------------------------*/
+/*-- Social List --*/
+ul.social_list li:hover{
+	background: #3598DC;
+}
+
+/*-- Contact Form --*/
+.contact_form input[type="submit"]{
+	background: #3598DC;
+	border: 2px solid #3598DC;
+}
+.have_marker:after{
+	border: 7px solid rgba(53, 152, 220, 0.3);
+	color: #3598DC;	
+}
+
+/*--------------------------------------------------------------
+22.2 Bottom Area Two
+--------------------------------------------------------------*/
+.footer_email input[type="submit"]{
+	background: #3598DC;
+}
+
+/*--------------------------------------------------------------
+25.0 Blog  
+--------------------------------------------------------------*/
+.blog_post_item_meta ul.blog_item_metalist li a{
+	color: #3598DC;
+}
+.blog_post_item_content a.readmore{
+	background: #3598DC;
+}
+
+/*--------------------------------------------------------------
+26.0 Sidebar
+--------------------------------------------------------------*/
+/*-- recent post --*/
+.widget_recent_posts a{
+	color: #3598DC;
+}
+ul.widget_popular_postlist li a{
+	color: #3598DC;
+}
+ul.widget_blog_catlist li:hover a{
+	color: #3598DC;
+}
+
+
+/*--------------------------------------------------------------
+27.0 Blog Details
+--------------------------------------------------------------*/
+ul.shares li:hover{
+	background: #3598DC;
+}
+ul.tags li:hover a{
+	color: #3598DC;
+}
+
+/*-- Comment area --*/
+.comment_area p a{
+	color: #3598DC;
+}
+
+/*-- Comment Form --*/
+.comment_form form input[type="text"]:focus,
+.comment_form form input[type="email"]:focus,
+.comment_form form input[type="phone"]:focus,
+.comment_form form input[type="submit"]:focus,
+.comment_form form textarea:focus{
+	border: 1px solid #3598DC;
+}
+.comment_form form input[type="submit"]{
+	background: #3598DC;
+	border: 2px solid #3598DC;
+}
