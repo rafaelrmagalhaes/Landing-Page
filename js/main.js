@@ -28,6 +28,15 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	$("#telas").owlCarousel({
+		navigation : true,
+		slideSpeed : 300,
+		paginationSpeed : 400,
+		autoPlay: false,
+		singleItem:true
+  });
+ 
+
 	// Back to Top
 	'use strict';	
 	
