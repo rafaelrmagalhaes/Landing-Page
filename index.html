@@ -54,7 +54,7 @@
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 						<div class="logo2">
 							<!-- logo -->
-							<h1><a href="#" title="logo"><img src="images/logo.png" alt="Zé Encontra"></a></h1>
+							<h1><a href="#" class="logo" title="logo"><img src="images/logo.png" alt="Zé Encontra"></a></h1>
 						</div>
 					</div>
 					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">					
@@ -172,46 +172,46 @@
                         <h2 class="section_title">Diferenciais</h2>
                         <div class="clearfix"></div>
                         <ul>
-                    <li class="wow fadeInLeft">
-                        
+
+                    <li class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInLeft">
                         <h3><span class="icon icon-dollar"></span> Barato</h3>
                         <div class="clearfix"></div>
                         <p>Aproveite nossa promoção e ganhe 90 dias totalmente grátis! Após esse período teremos planos a partir de R$150,00.</p>
                     </li>
-                    <li class="wow fadeInRight">
+                    <li class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInRight">
                         <h3><span class="icon icon-check"></span> Sistema financeiro</h3>
                         <div class="clearfix"></div>
-                        <p>Tenha acesso a um sistema financeiro que irá te ajudar a gerenciar seu negócio!</p>
+                        <p>Tenha acesso a um sistema financeiro completo e rápido que irá te ajudar a gerenciar seu negócio!</p>
                     </li>
-                    <li class="wow fadeInLeft">
+                    <li class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInLeft">
                         <h3><span class="icon icon-phone"></span> Seus problemas resolvidos rapidamente</h3>
                         <div class="clearfix"></div>
                         <p>O Zé está sempre trabalhando para te dar o suporte que precisa, atendimento rápido e personalizado!</p>
                     </li>
-                    <li class="wow fadeInRight">
+                    <li class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInRight">
                         <h3><span class="icon icon-infinity"></span> Cadastro de produtos ilimitados</h3>
                         <div class="clearfix"></div>
                         <p>Aqui você não precisa se preocupar em anunciar somente os produtos mais vendidos. O céu é o limite!</p>
                     </li>
-                    <li class="wow fadeInLeft">
+                    <li class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInLeft">
                         <h3><span class="icon icon-chart-line"></span> Controle suas vendas</h3>
                         <div class="clearfix"></div>
-                        <p>Acompanhe o número de pessoas que visualizam e compram seus produtos!</p>
+                        <p>Acompanhe em tempo real o número de pessoas que visualizam e compram seus produtos!</p>
                     </li>
-                    <li class="wow fadeInRight">
+                    <li class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInRight">
                         <h3><span class="icon icon-megaphone"></span> Livre para anunciar</h3>
                         <div class="clearfix"></div>
                         <p>Você é livre pra anunciar onde quiser, nós não iremos te impedir de divulgar seus produtos em outro lugar!</p>
                     </li>
-                    <li class="wow fadeInLeft">
+                    <li class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInLeft">
                         <h3><span class="icon icon-mobile"></span> Comodidade para o cliente e para você</h3>
                         <div class="clearfix"></div>
-                        <p>O site do ZéEncontra.com pode ser acessado tanto de celulares quanto de tablets!</p>
+                        <p>O site do ZéEncontra.com é adaptado para funcionar sem problemas em celulares e tablets!</p>
                     </li>
-                    <li class="wow fadeInRight">
+                    <li class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInRight">
                         <h3><span class="icon icon-thumbs-up"></span> Moderno e rápido</h3>
                         <div class="clearfix"></div>
-                        <p>O site é muito fácil de mexer e ainda possui um design bonito e moderno!</p>
+                        <p>O site é leve, muito fácil de mexer. Com um design bonito e moderno, é fácil conquistar a visita de futuros clientes!</p>
                     </li>                
                 </ul>
 
@@ -221,8 +221,8 @@
 
                 <div class="row">
                     <div id="telas">
-                        <div class="item"><img src="images/telas/home.jpg" alt="Página Inicial"></div>
                         <div class="item"><img src="images/telas/home-loja.jpg" alt="Página Inicial Lojista"></div>
+                        <div class="item"><img src="images/telas/home.jpg" alt="Página Inicial"></div>
                         <div class="item"><img src="images/telas/produto.jpg" alt="Tela de Produto"></div>
                         <div class="item"><img src="images/telas/produto-detalhes.jpg" alt="Tela de Detalhes do Produto"></div>
 
@@ -251,17 +251,33 @@
                         <h3>Junte-se a outros lojistas e se inscreva para receber novidades do ZéEncontra.com. Lembrando que você terá três meses grátis assim que a ferramenta estiver disponivel!</h3>
 
 
-                        <form class="col-md-8 center">
-                            <div class="form-group col-md-8">
-                                <input type="email" class="form-control" id="email" placeholder="Email" required>
+                        <form class="col-md-10 center">
+                            <div class="form-group col-md-6">
+                                <label for="nome">Seu nome*:</label>
+                                <input type="text" class="form-control" id="nome">
+
+                                <label for="email">Email da loja:</label>
+                                <input type="email" class="form-control" id="email">
+
+                                <label for="telefone">Telefone*:</label>
+                                <input type="text" class="form-control" id="telefone" required>
                             </div>
-                            <div class="form-group col-md-4">
+
+                            <div class="form-group col-md-6">
+                                <label for="mensagem">Algum dúvida ou sugestão?</label>
+                                <textarea class="form-control" id="mensagem"></textarea>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="form-group col-md-6">
+                                <a class="indique" href="javascript:;">Quero indicar um amigo</a>
+                            </div>
+                            <div class="form-group col-md-3 pull-right">
                                 <input type="submit" class="btn btn-warning" value="Quero usar!">
                             </div>
                             <div class="clearfix"></div>
                           </form>
 
-                          <p class="center">INDICAR UM AMIGO</p>
+                          
                     </div>
                     <!-- /twitter -->
                 </div>
@@ -297,7 +313,7 @@
 							<a href="http://twitter.com/Ze_Encontra" target="_blank"><i class="fa fa-twitter"></i></a>
 							</div>
 							<!-- back to top icon -->
-							<a class="back_top animated" href="#" title="back to the past"><i class="icon-up-open"></i></a>
+							<a href="#" class="back_top animated" title="Voltar ao topo"><i class="icon-up-open"></i></a>
 							<!-- back to top icon -->
                         </div>
                         <!-- /column -->

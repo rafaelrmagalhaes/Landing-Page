@@ -18,7 +18,7 @@ jQuery(document).ready(function($) {
 		$('html, body').stop().animate({
 		    'scrollTop': $target.offset().top - 80
 		}, 500, 'swing', function () {
-		    window.location.hash = target;
+		    //window.location.hash = target;
 		    $(document).on("scroll", onScroll);
 		});
 
@@ -50,85 +50,24 @@ jQuery(document).ready(function($) {
 			jQuery(".back_top").fadeOut('slow');
 		}
 	});
-
-	jQuery('.back_top').click(function(event) {
-		event.preventDefault();
-		jQuery('html, body').animate({scrollTop: 0}, 800);
-		return false;
-	});
-	
-
-	function resetForm($form) {
-		$form.find('input:text, input:password, input, input:file, select, textarea').val('');
-		$form.find('input:radio, input:checkbox').removeAttr('checked').removeAttr('selected');
-	}	
 	
 	
 	if($('#Grid').length){
 		$('#Grid').mixItUp();
 	}
-	
-	// jflickrfeed
-	if($('#mate_flickr').length){
-		$('#mate_flickr').jflickrfeed({
-			limit: 6,
-			qstrings: {
-				id: '52617155@N08'
-			},
-			itemTemplate: '<li>'+
-							'<a href="{{image}}" title="{{title}}">' +
-								'<img src="{{image_s}}" alt="{{title}}" />' +
-							'</a>' +
-						  '</li>'
-		});
-	}
-	
-	
+
+
+	$(".back_top").click(function(event) {
+		event.preventDefault();
+  		$("html, body").animate({scrollTop: 0}, 1000);
+	});
+
+	$(".logo").click(function(event) {
+		event.preventDefault();
+  		$("html, body").animate({scrollTop: 0}, 1000);
+	});
 	
 });
-
-
-//----------------------------------------
-//------------- Count Factors ------------	   
-//---------------------------------------- 
- 
-(function($) {
-	'use strict';
-	var method;
-    var noop = function () {};
-    var methods = [
-        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-        'timeStamp', 'trace', 'warn'
-    ];
-    var length = methods.length;
-    var console = (window.console = window.console || {});
-
-    while (length--) {
-        method = methods[length];
-
-        // Only stub undefined methods.
-        if (!console[method]) {
-            console[method] = noop;
-        }
-    }
-	
-	//-----------------------------------------
-	//---------------- WoW --------------------
-	//-----------------------------------------
-	var wow = new WOW(
-	  {
-		boxClass:     'wow',      // animated element css class (default is wow)
-		animateClass: 'animated', // animation css class (default is animated)
-		offset:       0,          // distance to the element when triggering the animation (default is 0)
-		mobile:       true,       // trigger animations on mobile devices (default is true)
-		live:         true        // act on asynchronously loaded content (default is true)
-	  }
-	);
-	wow.init();
-	
-})(jQuery); 
 
 
 //SCROLL

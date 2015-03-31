@@ -3604,11 +3604,8 @@ margin-bottom: 40px;
 }
 
 #diferenciais ul li {
-	width: 50%;
-	float: left;
-	text-align: left;
-	padding: 0 20px;
 	height: 140px;
+	text-align: left;
 }
 
 #diferenciais ul li h3 {
@@ -3628,4 +3625,27 @@ margin-bottom: 40px;
 #diferenciais #telas .item img {
 	margin: auto;
 	display: block;
+}
+
+#contato form label {
+	color: #fff;
+	font-size: 16px;
+	margin-top: 10px;
+	display: block;
+}
+
+#contato form input[type="text"],
+#contato form input[type="email"] {
+	height: 35px;
+}
+
+#contato form textarea {
+	height: 173px;
+}
+
+#contato .indique {
+	color: #ff3d1b;
+	margin-top: 10px;
+	display: inline-block;
+	font-size: 18px;
 }
