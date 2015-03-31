@@ -18,7 +18,7 @@ if (typeof Pace != "undefined") {
                                                 '<div class="loading-page-wrapper">' +
                                                     '<div class="container">' +
                                                             '<h1 class="block">' +
-                                                                '<a title="beauty" href="#">' +
+                                                                '<a title="Zé Encontra" href="#">' +
                                                                     '<img alt="" src="images/logo-carregando.png">' +
                                                                 '</a>' +
                                                             '</h1>' +

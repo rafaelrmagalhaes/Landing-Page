@@ -33,7 +33,10 @@ jQuery(document).ready(function($) {
 		slideSpeed : 300,
 		paginationSpeed : 400,
 		autoPlay: false,
-		singleItem:true
+		singleItem:true,
+		navigationText: false,
+		transitionStyle : "fade",
+		lazyLoad : true
   });
  
 
@@ -66,6 +69,21 @@ jQuery(document).ready(function($) {
 		event.preventDefault();
   		$("html, body").animate({scrollTop: 0}, 1000);
 	});
+
+
+	//-----------------------------------------
+	//---------------- WoW --------------------
+	//-----------------------------------------
+	var wow = new WOW(
+	  {
+		boxClass:     'wow',      // animated element css class (default is wow)
+		animateClass: 'animated', // animation css class (default is animated)
+		offset:       0,          // distance to the element when triggering the animation (default is 0)
+		mobile:       true,       // trigger animations on mobile devices (default is true)
+		live:         true        // act on asynchronously loaded content (default is true)
+	  }
+	);
+	wow.init();
 	
 });
 
@@ -84,6 +102,8 @@ function onScroll(event){
             currLink.parent().removeClass("active");
         }
     });
+
+
     
     if($(this).scrollTop() > 116){
 		$('#header2').addClass("top_fixed_head");
@@ -91,3 +111,4 @@ function onScroll(event){
 		$('#header2').removeClass("top_fixed_head");
 	}
 }
+

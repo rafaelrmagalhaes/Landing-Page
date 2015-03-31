@@ -359,6 +359,10 @@ th {
 --------------------------------------------------------------*/
 /*-- Body background --*/
 
+.no-padding {
+	padding: 0;
+}
+
 .clearfix{
 	clear: both;
 }
@@ -3536,10 +3540,13 @@ margin-bottom: 40px;
 
 .btn-warning {
 	width: 100%;
-	height: 50px;
+	height: 60px;
 	background: #ff3d1b;
 	border: none;
 	font-size: 22px;
+	border-radius: 10px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
 }
 
 .btn-warning:hover {
@@ -3617,14 +3624,42 @@ margin-bottom: 40px;
 	margin-top: 10px;
 }
 
+/* SLIDER */
+
 #diferenciais #telas {
-	background: #ddd;
-	padding: 10px;
+	background: url('../images/mac.png') center top no-repeat;
+	width: 100%;
+	background-size: 100%;
+	max-width: 887px;
+	margin: auto;
 }
 
 #diferenciais #telas .item img {
 	margin: auto;
 	display: block;
+}
+
+#diferenciais #telas .owl-controls {
+	position: absolute;
+	top: 50%;
+	margin-top: -49px;
+	width: 120%;
+	left: -10%;
+}
+
+#diferenciais #telas .owl-prev,
+#diferenciais #telas .owl-next {
+	width: 56px;
+	height: 98px;
+	display: inline-block;
+	background: url('../images/prev.png') center top no-repeat;
+
+}
+
+#diferenciais #telas .owl-next {
+	background-image: url('../images/next.png');
+	float: right;
+
 }
 
 #contato form label {
@@ -3636,11 +3671,26 @@ margin-bottom: 40px;
 
 #contato form input[type="text"],
 #contato form input[type="email"] {
-	height: 35px;
+	height: 60px;
+	float: left;
+}
+
+#contato form input[type="email"] {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
 }
 
 #contato form textarea {
-	height: 173px;
+	height: 114px;
+	resize: none;
+}
+
+#contato form input.menor {
+	height: 40px;
+}
+
+#contato form .enviar {
+	border-radius: 10px;
 }
 
 #contato .indique {
