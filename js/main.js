@@ -1,4 +1,4 @@
-jQuery(document).ready(function($) {
+$(document).ready(function($) {
 	
 	//SCROLL
 	$(document).on("scroll", onScroll);
@@ -32,33 +32,15 @@ jQuery(document).ready(function($) {
 		navigation : true,
 		slideSpeed : 300,
 		paginationSpeed : 400,
+		pagination: false,
 		autoPlay: false,
 		singleItem:true,
 		navigationText: false,
 		transitionStyle : "fade",
-		lazyLoad : true
+		lazyLoad : true,
+		mouseDrag: false,
+		touchDrag: false
   });
- 
-
-	// Back to Top
-	'use strict';	
-	
-	var offset = 220;
-	var duration = 1000;
-
-	jQuery(window).scroll(function() {
-		if (jQuery(this).scrollTop() > offset){
-			jQuery(".back_top").fadeIn('slow');
-		} else {
-			jQuery(".back_top").fadeOut('slow');
-		}
-	});
-	
-	
-	if($('#Grid').length){
-		$('#Grid').mixItUp();
-	}
-
 
 	$(".back_top").click(function(event) {
 		event.preventDefault();
@@ -102,13 +84,12 @@ function onScroll(event){
             currLink.parent().removeClass("active");
         }
     });
-
-
     
     if($(this).scrollTop() > 116){
 		$('#header2').addClass("top_fixed_head");
+		$(".back_top").fadeIn('slow');
 	} else {
 		$('#header2').removeClass("top_fixed_head");
+		$(".back_top").fadeOut('slow');
 	}
 }
-
