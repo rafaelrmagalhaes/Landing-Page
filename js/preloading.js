@@ -19,7 +19,7 @@ if (typeof Pace != "undefined") {
                                                     '<div class="container">' +
                                                             '<h1 class="block">' +
                                                                 '<a title="Zé Encontra" href="#">' +
-                                                                    '<img alt="" src="public/images/logo-carregando.png">' +
+                                                                    '<img alt="" src="images/logo-carregando.png">' +
                                                                 '</a>' +
                                                             '</h1>' +
                                                             '<div class="loading-progress-bar block col-sm-10 col-md-9 col-lg-8">' +
