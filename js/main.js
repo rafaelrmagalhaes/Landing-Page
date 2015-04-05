@@ -42,12 +42,45 @@ $(document).ready(function($) {
 		touchDrag: false
   });
     
+    function validEmail(email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+    }
+    
     $("#form-email button[type='submit']").on("click", function(){
-        $(this).attr('disabled','disabled');
-        $(this).children('span').addClass('hidden');
-        $(this).children('img').removeClass('hidden');
+        var button = $(this);
+        var email = $('#form-email input[type="email"]').val();
+        var data = {
+            email: email
+        };        
+        data = $(this).serialize() + "&" + $.param(data);
+        if(!validEmail(email) || email == '')
+            return false;       
+        
+         $.ajax({
+             beforeSend: function() {
+                button.attr('disabled','disabled');
+                button.children('span').addClass('hidden');
+                button.children('img').removeClass('hidden');
+            },
+            url : "ajax/ajax.php",
+            type: 'post',
+            data: data,            
+            success : function(data){
+                $('#form-more input#email').val(data);
+                button.children('img').addClass('hidden');
+                button.children('span').html("Ok!").removeClass('hidden');
+                $('#form-email').add('data-wow-duration');
+                $('#form-more').removeClass('hidden');
+                $('#form-more').addClass('wow flipInX animated');
+            },             
+            error: function(error) { 
+                
+            },
+         }, 10000);
+        return false;
     });
-
+    
 	$(".back_top").click(function(event) {
 		event.preventDefault();
   		$("html, body").animate({scrollTop: 0}, 1000);
