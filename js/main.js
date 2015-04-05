@@ -41,6 +41,12 @@ $(document).ready(function($) {
 		mouseDrag: false,
 		touchDrag: false
   });
+    
+    $("#form-email button[type='submit']").on("click", function(){
+        $(this).attr('disabled','disabled');
+        $(this).children('span').addClass('hidden');
+        $(this).children('img').removeClass('hidden');
+    });
 
 	$(".back_top").click(function(event) {
 		event.preventDefault();
