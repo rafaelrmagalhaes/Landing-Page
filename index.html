@@ -205,17 +205,20 @@
 						<h2 class="center">Ficou interessado?</h2>
 						<h3>Junte-se a outros lojistas e se inscreva para receber seu voucher de três meses grátis assim que a ferramenta estiver disponível!</h3>
 
-						<form action="" class="col-md-7 col-sm-12 col-xs-12 center wow flipInX">
+						<form id="form-email" method="post" action="#" class="col-md-7 col-sm-12 col-xs-12 center wow flipInX">
 							<div class="form-group col-md-8 col-sm-8 col-xs-12 no-padding"> 
 								<input type="email" class="form-control" id="email" placeholder="Insira seu email">
 							</div>
 							<div class="form-group col-md-4 col-sm-4 col-xs-8 no-padding segura-botao"> 
-								<input type="submit" class="btn btn-warning" value="Quero usar!">
+                                <button type="submit" class="btn btn-warning">
+                                    <span>Quero usar!</span>
+                                    <img src="images/loading.svg" class="hidden" />
+                                </button>
 							</div>
 						</form>
 
-						<!--<form class="col-md-9 col-sm-12 col-xs-12 center">
-                            <input type="hidden" name="email" value="email@email.com"> 
+						<form id="form-more" method="post" action="#" class="col-md-9 col-sm-12 col-xs-12 center hidden">
+                            <input type="hidden" name="email" value=""> 
                             <div class="form-group col-md-6 col-sm-12 col-xs-12">
                                 <label for="nome">Seu nome:</label>
                                 <input type="text" class="menor form-control" id="nome">
@@ -231,7 +234,7 @@
                             <div class="form-group col-md-12 col-sm-12 col-xs-12 segura-botao">
                                  <input type="submit" class="pull-right btn btn-warning enviar" value="Enviar">
                             </div>
-                        </form>-->
+                        </form>
 					</div>
 				</div>
 			</div>
