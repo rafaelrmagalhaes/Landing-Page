@@ -51,6 +51,7 @@ $(document).ready(function($) {
         var button = $(this);
         var email = $('#form-email input[type="email"]').val();
         var data = {
+            form: 'form-email',
             email: email
         };        
         data = $(this).serialize() + "&" + $.param(data);
@@ -67,27 +68,35 @@ $(document).ready(function($) {
             type: 'post',
             data: data,            
             success : function(data){
-                $('#form-more input#email').val(data);
-                setTimeout(
-                    function(){
-                        button.children('img').addClass('hidden');
-                        button.children('span').html("Ok!").delay(5000).removeClass('hidden');
-                        $('#form-email').removeAttr('style');
-                    }, 2000);
-                setTimeout(
-                    function(){
-                        $('#form-email').addClass('wow animated flipOutX');
-                    }, 2000);
-                setInterval(function(){
-                    $('#form-email').addClass('hidden');
-                    $('#form-more').removeClass('hidden');
-                    $('#form-more').addClass('wow flipInX animated');                
-                }, 2300);
+                if(data['return'] === true)
+                {
+                    $('#form-more input#email').val(data['email']);
+                    setTimeout(
+                        function(){
+                            button.children('img').addClass('hidden');
+                            button.children('span').html("Ok!").delay(5000).removeClass('hidden');
+                            $('#form-email').removeAttr('style');
+                        }, 2000);
+                    setTimeout(
+                        function(){
+                            $('#form-email').addClass('wow animated flipOutX');
+                        }, 2000);
+                    setInterval(function(){
+                        $('#form-email').addClass('hidden');
+                        $('#form-more').removeClass('hidden');
+                        $('#form-more').addClass('wow flipInX animated');                
+                    }, 2300);
+                } else {
+                    button.removeAttr('disabled');
+                    button.children('span').removeClass('hidden');
+                    button.children('img').addClass('hidden');
+                    return false;
+                }
             },             
             error: function(error) { 
-                
+                alert(error);
             },
-         }, 10000);
+         });
         return false;
     });
     
