@@ -911,6 +911,14 @@ margin-bottom: 40px;
 	border-radius: 10px;
 }
 
+#contato form button > img{
+    height: 100%;
+}
+
+#contato form button[disabled]{
+    opacity: 1 !important; /* sobreescrevendo bootstrap */
+}
+
 /* AJUSTES RESPONSIVO */
 
 @media(max-width:992px){
