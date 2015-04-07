@@ -25,9 +25,12 @@ function formEmail($request, $return)
         if($num<=0)
         {
             $id = mysql_insert_id();
-            $return['id'] = $id;
             $time = date("Y-m-d H:i:s");
             mysql_query("INSERT INTO emails (id, email, createdAt) VALUES ('".$id."', '".$email."', '".$time."')") or die(mysql_error());
+            $id = mysql_query("SELECT id FROM emails WHERE email='".$email."'");
+            $id = mysql_fetch_object($id);
+            $id = $id->id;
+            $return['id'] = $id;
             echo json_encode($return);
             return json_encode($return);
         } else {
