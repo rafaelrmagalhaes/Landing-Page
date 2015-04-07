@@ -2,21 +2,22 @@
 include 'conexao.php';
 $return = array();
 $return['return'] = false;
+$request = $_REQUEST;
 
-if($_REQUEST['form'] == 'form-email'){
-    formEmail($_REQUEST, $return);
-} else if($_REQUEST['form'] == 'form-more'){
-    formMore($_REQUEST, $return);    
-} else if($_REQUEST['form'] == 'form-friend'){
-    formFriend($_REQUEST, $return);
+if($request['form'] == 'form-email'){
+    formEmail($request, $return);
+} else if($request['form'] == 'form-more'){
+    formMore($request, $return);    
+} else if($request['form'] == 'form-friend'){
+    formFriend($request, $return);
 } else {
     echo json_encode($return);
     return json_encode($return);
 }
 
-function formEmail($_REQUEST, $return)
+function formEmail($request, $return)
 {
-    $email = $_REQUEST['email'];
+    $email = $request['email'];
     if(!empty($email)){
         $return['return'] = true; $return['email'] = $email;
         $result = mysql_query("SELECT email FROM emails WHERE email='".$email."'");
@@ -43,12 +44,12 @@ function formEmail($_REQUEST, $return)
     }
 }
 
-function formMore($_REQUEST, $return)
+function formMore($request, $return)
 {
-    $id_email = $_REQUEST['id_email'];
-    $telefone = $_REQUEST['telefone'];
-    $nome = $_REQUEST['nome'];
-    $mensagem = $_REQUEST['mensagem'];
+    $id_email = $request['id_email'];
+    $telefone = $request['telefone'];
+    $nome = $request['nome'];
+    $mensagem = $request['mensagem'];
     if(!empty($telefone) && !empty($id_email)){
         $return['return'] = true;
         $id = mysql_insert_id();
@@ -67,10 +68,10 @@ function formMore($_REQUEST, $return)
     }
 }
 
-function formFriend($_REQUEST, $return)
+function formFriend($request, $return)
 {
-    $id_email = $_REQUEST['id_email'];
-    $email = $_REQUEST['email'];
+    $id_email = $request['id_email'];
+    $email = $request['email'];
     if(!empty($email)){
         $return['return'] = true;
         $id = mysql_insert_id();

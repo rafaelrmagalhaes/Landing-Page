@@ -4,8 +4,6 @@ $(document).ready(function($) {
 	$(document).on("scroll", onScroll);
     
 	$('body a[href^="#"].inside').on('click', function (e) {
-        if(!e)
-            e = window.event;
 		e.preventDefault();
 		$(document).off("scroll");
 
@@ -110,7 +108,6 @@ $(document).ready(function($) {
                 }
             },             
             error: function(error) {
-                alert('fodase ' + $(this));
                 criaSpan("Ocorreu algum erro.", button);
                 return false;
             },
