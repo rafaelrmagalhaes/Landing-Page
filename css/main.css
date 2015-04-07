@@ -567,7 +567,7 @@ section#twitter{
 	background-size: cover;
 }
 section#contato{
-	padding: 100px 0 50px;
+	padding: 100px 0 30px;
 	background: #01507C;
 }
 
@@ -592,6 +592,7 @@ section#contato{
 
 .social-footer{
     text-align: center;
+    margin: 20px 0 0 0;
 }
 
 .social-footer a{
@@ -929,13 +930,17 @@ margin-bottom: 40px;
 
 #contato p.tel {
     text-align: center;
-    font-size: 30px;
-    padding: 25px;
+    font-size: 18px;
+    padding: 12px 0 0 0;
 	color: #fff;
 	display: block;
 	margin: 0;
 	width: 100%;
 	white-space: nowrap;
+}
+
+#contato p.tel .fa {
+	margin-right: 7px;
 }
 
 #indique{

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'fontello';
-  src: url('../fonts/fontello.eot?25748613');
-  src: url('../fonts/fontello.eot?25748613#iefix') format('embedded-opentype'),
-       url('../fonts/fontello.woff?25748613') format('woff'),
-       url('../fonts/fontello.ttf?25748613') format('truetype'),
-       url('../fonts/fontello.svg?25748613#fontello') format('svg');
+  src: url('../fonts/fontello.eot?68592931');
+  src: url('../fonts/fontello.eot?68592931#iefix') format('embedded-opentype'),
+       url('../fonts/fontello.woff?68592931') format('woff'),
+       url('../fonts/fontello.ttf?68592931') format('truetype'),
+       url('../fonts/fontello.svg?68592931#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?25748613#fontello') format('svg');
+    src: url('../font/fontello.svg?68592931#fontello') format('svg');
   }
 }
 */
@@ -50,14 +50,15 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-facebook:before { content: '\e800'; } /* '' */
-.icon-twitter:before { content: '\e801'; } /* '' */
-.icon-megaphone:before { content: '\e802'; } /* '' */
-.icon-thumbs-up:before { content: '\e803'; } /* '' */
-.icon-chart-line:before { content: '\e804'; } /* '' */
-.icon-check:before { content: '\e805'; } /* '' */
-.icon-mobile:before { content: '\e806'; } /* '' */
+.icon-twitter:before { content: '\e800'; } /* '' */
+.icon-megaphone:before { content: '\e801'; } /* '' */
+.icon-thumbs-up:before { content: '\e802'; } /* '' */
+.icon-chart-line:before { content: '\e803'; } /* '' */
+.icon-check:before { content: '\e804'; } /* '' */
+.icon-mobile:before { content: '\e805'; } /* '' */
+.icon-facebook:before { content: '\e806'; } /* '' */
 .icon-infinity:before { content: '\e807'; } /* '' */
 .icon-up-open:before { content: '\e808'; } /* '' */
 .icon-phone:before { content: '\e809'; } /* '' */
 .icon-dollar:before { content: '\e80a'; } /* '' */
+.icon-mail-alt:before { content: '\e80b'; } /* '' */
