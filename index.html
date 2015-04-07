@@ -50,7 +50,6 @@
 					<div class="col-lg-8 col-md-8 col-sm-10 col-xs-10"><nav class="navbar navbar-default" role="navigation">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_menu2"> 
-
 								<span class="sr-only">Toggle navigation</span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
@@ -60,10 +59,10 @@
 
 						<div class="collapse navbar-collapse" id="main_menu2">
 							<ul class="nav navbar-nav">
-								<li class="active"><a href="#apresentacao">Apresentação</a></li>
-								<li><a href="#como-funciona">Como Funciona?</a></li>
-								<li><a href="#diferenciais">Diferenciais</a></li>
-								<li><a href="#contato">Quero fazer parte!</a></li>
+								<li class="active"><a href="#apresentacao" class="inside">Apresentação</a></li>
+								<li><a href="#como-funciona" class="inside">Como Funciona?</a></li>
+								<li><a href="#diferenciais" class="inside">Diferenciais</a></li>
+								<li><a href="#contato" class="inside">Quero fazer parte!</a></li>
 							</ul>
 						</div>
 					</div>
@@ -81,7 +80,7 @@
 						</a>
 
 						<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 center">
-							<a href="#contato">
+							<a href="#contato" class="inside">
 								<img src="images/cad-botao.png" alt="Cadastre-se Grátis">
 							</a>
 						</div>
@@ -204,10 +203,16 @@
 					<div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12 twitter_holder wow fadeIn animated">
 						<h2 class="center">Ficou interessado?</h2>
 						<h3>Junte-se a outros lojistas e se inscreva para receber seu voucher de três meses grátis assim que a ferramenta estiver disponível!</h3>
+                        
+                        <div class="sucesso hidden">
+                            <h2>Valeu por se cadastrar!</h2>
+                            <h3>Que tal agora indicar um amigo?</h3>
+                            <div class="arrow center wow bounce" data-wow-iteration="infinite"></div>
+                        </div>
 
 						<form id="form-email" method="post" action="#" class="col-md-7 col-sm-12 col-xs-12 center wow flipInX">
 							<div class="form-group col-md-8 col-sm-8 col-xs-12 no-padding"> 
-								<input type="email" class="form-control" id="email" placeholder="Insira seu email">
+								<input type="email" class="form-control" id="email" required placeholder="Insira seu email">
 							</div>
 							<div class="form-group col-md-4 col-sm-4 col-xs-8 no-padding segura-botao"> 
                                 <button type="submit" class="btn btn-warning">
@@ -218,17 +223,17 @@
 						</form>
 
 						<form id="form-more" method="post" action="#" class="col-md-9 col-sm-12 col-xs-12 center hidden">
-                            <input type="hidden" id="email" name="email"> 
+                            <input type="hidden" id="id_email" name="id_email"> 
                             <div class="form-group col-md-6 col-sm-12 col-xs-12">
                                 <label for="nome">Seu nome:</label>
-                                <input type="text" class="menor form-control" id="nome">
+                                <input type="text" class="menor form-control" name="nome" id="nome">
                                 <div class="clearfix"></div>
-                                <label for="telefone">Telefone:</label>
-                                <input type="text" class="menor form-control" id="telefone">
+                                <label for="telefone">Telefone*:</label>
+                                <input type="text" class="menor form-control" name="telefone" required id="telefone">
                             </div>
                             <div class="form-group col-md-6 col-sm-12 col-xs-12">
                                 <label for="mensagem">Algum dúvida ou sugestão?</label>
-                                <textarea class="form-control" id="mensagem"></textarea>
+                                <textarea class="form-control" name="mensagem" id="mensagem"></textarea>
                             </div>
                             <div class="clearfix"></div>
                             <div class="form-group col-md-12 col-sm-12 col-xs-12 segura-botao">
@@ -238,29 +243,52 @@
                                 </button>
                             </div>
                         </form>
+                        
+                        <div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12 twitter_holder wow fadeIn animated">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+				                <p class="tel"><i class="fa icon-phone"></i>(21) 3840-3340</p>
+                            </div>  
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="social-footer">
+                                    <a href="http://www.facebook.com/ZeEncontra" target="_blank"><i class="fa icon-facebook wow fadeInLeft"></i></a>
+                                    <a href="http://twitter.com/Ze_Encontra" target="_blank"><i class="fa icon-twitter wow fadeInRight"></i></a>
+                                </div>                            
+                            </div>                          
+                        </div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- FOOTER -->
-		<footer id="footer" class="footer">
-			<section class="copyright_area">
-				<h2 class="hidden">Redes Sociais</h2>
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 copyright_text wow fadeIn">
-							<div class="social-footer">
-								<a href="http://www.facebook.com/ZeEncontra" target="_blank"><i class="fa icon-facebook"></i></a>
-								<a href="http://twitter.com/Ze_Encontra" target="_blank"><i class="fa icon-twitter"></i></a>
+		<!-- INDIQUE AMIGO -->
+		<footer id="indique" class="twitter">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12 twitter_holder wow fadeIn animated">
+						<h2 class="center">Indique um amigo!</h2>
+						<h3>Faça com que seu amigo seja mais um lojista feliz!</h3>
+                        
+                        <div class="sucesso-amigo hidden">
+                            <h2>Obrigado!</h2>
+                            <h3 class="sorriso">=)</h3>
+                        </div>
+                        
+						<form id="form-friend" method="post" action="#" class="col-md-7 col-sm-12 col-xs-12 center wow bounce">
+                            <input type="hidden" id="id_email" name="id_email">                            
+							<div class="form-group col-md-4 col-sm-4 col-xs-8 no-padding segura-botao"> 
+                                <button type="submit" class="btn btn-warning">
+                                    <span>Indique</span>
+                                    <img src="images/loading.svg" class="hidden" />
+                                </button>
 							</div>
-							<p class="tel"><i class="fa icon-phone"></i>(21) 3840-3340</p>
-
-							<a href="#" class="back_top animated" title="Voltar ao topo"><i class="icon-up-open"></i></a>
-						</div>
+							<div class="form-group col-md-8 col-sm-8 col-xs-12 no-padding"> 
+								<input type="email" class="form-control" name="email" id="email" required placeholder="Insira o email do seu amigo">
+							</div>
+						</form>
+                        <a href="#" class="back_top animated" title="Voltar ao topo"><i class="icon-up-open"></i></a>
 					</div>
 				</div>
-			</section>
+			</div>
 		</footer>
 	</div>
 	<script src="js/jquery.js"></script>
