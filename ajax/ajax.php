@@ -25,8 +25,7 @@ function formEmail($_REQUEST)
     if(!empty($email)){
         $return['return'] = true; $return['email'] = $email;
         $result = mysql_query("SELECT email FROM emails WHERE email='".$email."'");
-        $num = mysql_num_rows($result);
-        var_dump($num);						
+        $num = mysql_num_rows($result);	
         if($num<=0)
         {
             $id = mysql_insert_id();

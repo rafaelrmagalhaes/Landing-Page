@@ -47,6 +47,13 @@ $(document).ready(function($) {
         return regex.test(email);
     }
     
+    function criaSpan(msg){
+        var form = $("form").parents();
+        form.prepend("<span class='formError'></span>");
+        $("span.formError").html(msg);
+        $("span.formError").remove().delay(10000);
+    }
+    
     $("#form-email button[type='submit']").on("click", function(){
         var button = $(this);
         var email = $('#form-email input[type="email"]').val();
@@ -55,9 +62,10 @@ $(document).ready(function($) {
             email: email
         };        
         data = $(this).serialize() + "&" + $.param(data);
-        if(!validEmail(email) || email == '')
+        if(!validEmail(email) || email == ''){
+            criaSpan("E-mail inválido.");
             return false;       
-        
+        }
          $.ajax({
              beforeSend: function() {
                 button.attr('disabled','disabled');
@@ -99,6 +107,65 @@ $(document).ready(function($) {
          });
         return false;
     });
+    
+    $("#form-more button[type='submit']").on("click", function(){
+        var button = $(this);
+        var nome = $('#form-more #nome').val();
+        var telefone = $('#form-more #telefone').val();
+        var mensagem = $('#form-more #mensagem').val();
+        var data = {
+            form: 'form-more',
+            nome: nome,
+            telefone: telefone,
+            mensagem: mensagem
+        };
+        data = $(this).serialize() + "&" + $.param(data);     
+        
+         $.ajax({
+             beforeSend: function() {
+                button.attr('disabled','disabled');
+                button.children('span').addClass('hidden');
+                button.children('img').removeClass('hidden');
+            },
+            url : "ajax/ajax.php",
+            type: 'post',
+            data: data,            
+            success : function(data){
+                if(data['return'] === true)
+                {
+                    $('#form-more input#email').val(data['email']);
+                    setTimeout(
+                        function(){
+                            button.children('img').addClass('hidden');
+                            button.children('span').html("Ok!").delay(5000).removeClass('hidden');
+                            $('#form-email').removeAttr('style');
+                        }, 2000);
+                    setTimeout(
+                        function(){
+                            $('#form-email').addClass('wow animated flipOutX');
+                        }, 2000);
+                    setInterval(function(){
+                        $('#form-email').addClass('hidden');
+                        $('#form-more').removeClass('hidden');
+                        $('#form-more').addClass('wow flipInX animated');                
+                    }, 2300);
+                } else {
+                    button.removeAttr('disabled');
+                    button.children('span').removeClass('hidden');
+                    button.children('img').addClass('hidden');
+                    criaSpan("Ocorreu algum erro. Tente novamente.");
+                    return false;
+                }
+            },             
+            error: function(error) { 
+                alert(error);
+            },
+         });
+        return false;
+    });
+    
+    
+    
     
 	$(".back_top").click(function(event) {
 		event.preventDefault();
