@@ -133,6 +133,10 @@ $(document).ready(function($) {
             mensagem: mensagem
         };
         dados = $(this).serialize() + "&" + $.param(dados);
+        if(telefone == ''){
+            criaSpan("O campo de telefone é obrigatório.", button);
+            return false;
+        }
          $.ajax({
              beforeSend: function() {
                 button.attr('disabled','disabled');
@@ -157,11 +161,7 @@ $(document).ready(function($) {
                         $('div.sucesso h2').addClass('wow fadeInDown animated');
                         $('div.sucesso h3').addClass('wow fadeInDown animated');
                         $('#indique').addClass('ativo');
-                    }, 1300);                    
-                    /*setTimeout(function(){
-                        
-                        $("html, body").animate({ scrollTop: $(document).height() }, 1000);
-                    }, 2000);*/
+                    }, 1300); 
                 } else {
                     button.removeAttr('disabled');
                     button.children('span').removeClass('hidden');
