@@ -150,6 +150,7 @@ $(document).ready(function($) {
                         $('#form-more').addClass('wow animated flipOutX');
                         $('#form-more').addClass('hidden');
                         $('div.sucesso').removeClass('hidden');
+                        $('div.texto-contato').addClass('hidden');
                         $('div.sucesso h2').addClass('wow fadeInDown animated');
                         $('div.sucesso h3').addClass('wow fadeInDown animated');
                     }, 1300);                    
