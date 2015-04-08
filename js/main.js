@@ -1,4 +1,7 @@
 $(document).ready(function($) {
+
+    //MASCARA
+    $("#telefone").mask("(99)9999-9999?9");
 	
 	//SCROLL
 	$(document).on("scroll", onScroll);
@@ -53,13 +56,13 @@ $(document).ready(function($) {
         {
             form.append("<span class='formError'></span>");
         }
-        $("span.formError").html(msg).addClass('wow fadeInLeft animated');
-        setTimeout(function(){
+        $("span.formError").html(msg).addClass('wow fadeIn animated');
+        /*setTimeout(function(){
             $("span.formError").removeAttr("style").addClass('wow fadeOutLeft animated');            
-            setTimeout(function(){
-                $("span.formError").remove();
-            }, 1000);
-        }, 3000);
+             setTimeout(function(){
+                 $("span.formError").remove();
+             }, 1000);
+        }, 3000);*/
     }
     
     //***FORM DO E-MAIL****//
@@ -98,7 +101,7 @@ $(document).ready(function($) {
                         $('#form-email').addClass('hidden');
                         $('#form-more').removeClass('hidden');
                         $('#form-more').addClass('wow flipInX animated');
-                    }, 1300); 
+                    }, 500); 
                 } else {
                     button.removeAttr('disabled');
                     button.children('span').removeClass('hidden');
@@ -150,13 +153,15 @@ $(document).ready(function($) {
                         $('#form-more').addClass('wow animated flipOutX');
                         $('#form-more').addClass('hidden');
                         $('div.sucesso').removeClass('hidden');
-                        $('div.texto-contato').addClass('hidden');
+                        $('div.texto-contato').fadeOut();
                         $('div.sucesso h2').addClass('wow fadeInDown animated');
                         $('div.sucesso h3').addClass('wow fadeInDown animated');
+                        $('#indique').addClass('ativo');
                     }, 1300);                    
-                    setTimeout(function(){
+                    /*setTimeout(function(){
+                        
                         $("html, body").animate({ scrollTop: $(document).height() }, 1000);
-                    }, 2000);
+                    }, 2000);*/
                 } else {
                     button.removeAttr('disabled');
                     button.children('span').removeClass('hidden');

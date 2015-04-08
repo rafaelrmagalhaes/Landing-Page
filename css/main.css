@@ -754,7 +754,7 @@ margin-bottom: 40px;
 	font-size: 18px;
 	text-align: center;
 	padding: 0 80px;
-	margin-bottom: 80px;
+	margin-bottom: 40px;
 }
 
 /* APRESENTACAO */
@@ -884,34 +884,34 @@ margin-bottom: 40px;
 
 }
 
-#contato form label {
+form label {
 	color: #fff;
 	font-size: 16px;
 	margin-top: 10px;
 	display: block;
 }
 
-#contato form input[type="text"],
-#contato form input[type="email"] {
+form input[type="text"],
+form input[type="email"] {
 	height: 60px;
 	float: left;
 }
 
-#contato form input[type="email"] {
+form input[type="email"] {
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 }
 
-#contato form textarea {
-	height: 114px;
+form textarea {
+	height: 114px !important;
 	resize: none;
 }
 
-#contato form input.menor {
+form input.menor {
 	height: 40px;
 }
 
-#contato form .enviar {
+form .enviar {
 	border-radius: 10px;
 }
 
@@ -924,11 +924,20 @@ margin-bottom: 40px;
     opacity: 1 !important; /* sobreescrevendo bootstrap */
 }
 
-#contato span.formError{
+span.formError{
     color: #ffffff;
+    text-align: center;
+	display: block;
+	clear: both;
 }
 
-#contato p.tel {
+footer {
+	background: #01507C;
+	float: left;
+	width: 100%;
+}
+
+footer p.tel {
     text-align: center;
     font-size: 18px;
     padding: 12px 0 0 0;
@@ -939,7 +948,7 @@ margin-bottom: 40px;
 	white-space: nowrap;
 }
 
-#contato p.tel .fa {
+footer p.tel .fa {
 	margin-right: 7px;
 }
 
@@ -951,25 +960,38 @@ margin-bottom: 40px;
 	text-align: center;
 }
 
-#indique{
-	padding: 100px 0 50px;
+#indique {
+	height: 0;
+	overflow: hidden;
     background-color: #f4d03e;
 }
 
-#indique .btn-warning {
-	height: 50px;
-	border-radius: 10px;
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
+#indique.ativo {
+	height: 430px;
+	-webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;    
+    transition: all 1s ease-in-out;	
 }
 
-#indique input#email{
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
+#indique h2 {
+	margin-top: 50px;
 }
 
 #indique h3.sorriso{
     font-size: 50px;
+}
+
+#indique .social-share {
+	text-align: center;
+	margin: 10px 0 50px;
+}
+
+#indique .social-share .twitter-share-button {
+	display: inline-block;
+	vertical-align: 18px;
+	margin-right: 20px;
 }
 
 /* AJUSTES RESPONSIVO */

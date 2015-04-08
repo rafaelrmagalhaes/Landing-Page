@@ -253,28 +253,13 @@
                                 </button>
                             </div>
                         </form>
-                        
-                        <div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12 twitter_holder wow fadeIn animated">
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-				                <p class="tel"><i class="fa icon-phone"></i>(21) 3840-3340</p>
-				                <p class="tel"><i class="fa icon-mail-alt"></i>contato@zeencontra.com</p>
-
-				                </div>  
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="social-footer">
-                                    <a href="http://www.facebook.com/ZeEncontra" target="_blank"><i class="fa icon-facebook wow fadeInLeft"></i></a>
-                                    <a href="http://twitter.com/Ze_Encontra" target="_blank"><i class="fa icon-twitter wow fadeInRight"></i></a>
-
-                                </div>                            
-                            </div>                          
-                        </div>
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<!-- INDIQUE AMIGO -->
-		<footer id="indique" class="twitter">
+		<section id="indique" class="twitter">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12 twitter_holder wow fadeIn animated">
@@ -286,7 +271,7 @@
                             <h3 class="sorriso">=)</h3>
                         </div>
                         
-						<form id="form-friend" method="post" action="#" class="col-md-7 col-sm-12 col-xs-12 center wow bounce">
+						<form id="form-friend" method="post" action="#" class="col-md-7 col-sm-12 col-xs-12 center">
                             <input type="hidden" id="id_email" name="id_email">                            
 							
 							<div class="form-group col-md-8 col-sm-8 col-xs-12 no-padding"> 
@@ -300,25 +285,39 @@
 							</div>
 						</form>
 						<div class="clearfix"></div>
-						<div class="fb-like" data-href="https://facebook.com/zeencontra" data-layout="box_count" data-action="like" data-show-faces="false" data-share="true"></div>
-
-                                    <a class="twitter-share-button" data-count="vertical" href="https://twitter.com/share">
-										Tweet
-										</a>
-										<script>
-										window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
-										</script>
+						<div class="social-share">
+							<a class="twitter-share-button" data-count="vertical" href="https://twitter.com/share">Tweetar</a>
+							<div class="fb-like" data-href="https://facebook.com/zeencontra" data-layout="box_count" data-action="like" data-show-faces="false" data-share="true"></div>
+						</div>				
                         <a href="#" class="back_top animated" title="Voltar ao topo"><i class="icon-up-open"></i></a>
 					</div>
 				</div>
 			</div>
-		</footer>
+		</section>
+
+		<footer class="twitter_holder">
+			<div class="col-md-12 col-sm-12 col-xs-12 wow fadeIn animated">
+                <p class="tel"><i class="fa icon-phone"></i>(21) 3840-3340</p>
+                <p class="tel"><i class="fa icon-mail-alt"></i>contato@zeencontra.com</p>
+			</div>  
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="social-footer">
+                    <a href="http://www.facebook.com/ZeEncontra" target="_blank"><i class="fa icon-facebook wow fadeInLeft"></i></a>
+                    <a href="http://twitter.com/Ze_Encontra" target="_blank"><i class="fa icon-twitter wow fadeInRight"></i></a>
+                </div>                            
+            </div>
+            <div class="clearfix"></div>                      
+        </footer>
 	</div>
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/wow.js"></script>
 	<script src="js/html5lightbox.js"></script>
 	<script src="js/owl.carousel.js"></script>
+	<script src="js/mask.js"></script>
 	<script src="js/main.js"></script>
+	<script>
+		window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+	</script>
 </body>
 </html>
