@@ -34,13 +34,6 @@
 
 <body data-spy="scroll" data-target="#main_menu2">
 	<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 	<div class="body_innerwrap">
 		<header id="header2" class="header">
 			<div class="container">
@@ -48,7 +41,7 @@
 					<div class="col-lg-4 col-md-4 col-sm-2 col-xs-2">
 						<div class="logo2">
 							<h1>
-								<a href="#" class="logo" title="logo">
+								<a href="#apresentacao" class="logo inside" title="logo">
 									<img class="maior" src="images/logo.png" alt="Zé Encontra">
 									<img class="hidden" src="images/logo-carregando.png" alt="Zé Encontra">
 								</a>
@@ -208,7 +201,7 @@
 		<section id="contato" class="twitter">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12 twitter_holder wow fadeIn animated">
+					<div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 twitter_holder center wow fadeIn animated">
 						<div class="texto-contato">
 						<h2 class="center">Ficou interessado?</h2>
 						<h3>Junte-se a outros lojistas e se inscreva para receber seu voucher de três meses grátis assim que a ferramenta estiver disponível!</h3>
@@ -262,7 +255,7 @@
 		<section id="indique" class="twitter">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12 twitter_holder wow fadeIn animated">
+					<div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 center twitter_holder wow fadeIn animated">
 						<h2 class="center">Indique um amigo!</h2>
 						<h3>Faça com que seu amigo seja mais um lojista feliz!</h3>
                         
@@ -289,14 +282,13 @@
 							<a class="twitter-share-button" data-count="vertical" href="https://twitter.com/share">Tweetar</a>
 							<div class="fb-like" data-href="https://facebook.com/zeencontra" data-layout="box_count" data-action="like" data-show-faces="false" data-share="true"></div>
 						</div>				
-                        <a href="#" class="back_top animated" title="Voltar ao topo"><i class="icon-up-open"></i></a>
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<footer class="twitter_holder">
-			<div class="col-md-12 col-sm-12 col-xs-12 wow fadeIn animated">
+			<div class="col-md-12 col-sm-12 col-xs-12 center wow fadeIn animated">
                 <p class="tel"><i class="fa icon-phone"></i>(21) 3840-3340</p>
                 <p class="tel"><i class="fa icon-mail-alt"></i>contato@zeencontra.com</p>
 			</div>  
@@ -306,7 +298,8 @@
                     <a href="http://twitter.com/Ze_Encontra" target="_blank"><i class="fa icon-twitter wow fadeInRight"></i></a>
                 </div>                            
             </div>
-            <div class="clearfix"></div>                      
+            <div class="clearfix"></div>
+            <a href="#apresentacao" class="back_top animated inside" title="Voltar ao topo"><i class="icon-up-open"></i></a>                     
         </footer>
 	</div>
 	<script src="js/jquery.js"></script>
@@ -318,6 +311,14 @@
 	<script src="js/main.js"></script>
 	<script>
 		window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+	</script>
+	<script>(function(d, s, id) {
+  		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3";
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
 	</script>
 </body>
 </html>

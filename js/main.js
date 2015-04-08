@@ -231,17 +231,6 @@ $(document).ready(function($) {
          });
         return false;
     });
-    
-    
-	$(".back_top").click(function(event) {
-		event.preventDefault();
-  		$("html, body").animate({scrollTop: 0}, 1000);
-	});
-
-	$(".logo").click(function(event) {
-		event.preventDefault();
-  		$("html, body").animate({scrollTop: 0}, 1000);
-	});
 
 
 	//-----------------------------------------
