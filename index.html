@@ -39,7 +39,7 @@
 					<div class="col-lg-4 col-md-4 col-sm-2 col-xs-2">
 						<div class="logo2">
 							<h1>
-								<a href="#apresentacao" class="logo inside" title="logo">
+								<a href="#apresentacao" class="logo inside" title="logo" onclick="ga('send', 'event', 'Logo', 'click', 'Logo');">
 									<img class="maior" src="images/logo.png" alt="Zé Encontra" title="Zé Encontra">
 									<img class="hidden" src="images/logo-carregando.png" alt="Zé Encontra" title="Zé Encontra">
 								</a>
@@ -59,10 +59,10 @@
 
 							<div class="collapse navbar-collapse" id="main_menu2">
 								<ul class="nav navbar-nav">
-									<li class="active"><a href="#apresentacao" class="inside">Apresentação</a></li>
-									<li><a href="#como-funciona" class="inside">Como Funciona?</a></li>
-									<li><a href="#diferenciais" class="inside">Diferenciais</a></li>
-									<li><a href="#contato" class="inside">Quero fazer parte!</a></li>
+									<li class="active"><a href="#apresentacao" class="inside" onclick="ga('send', 'event', 'Apresentação', 'click', 'Apresentação');">Apresentação</a></li>
+									<li><a href="#como-funciona" class="inside" onclick="ga('send', 'event', 'Como Funciona', 'click', 'Como Funciona');">Como Funciona?</a></li>
+									<li><a href="#diferenciais" class="inside" onclick="ga('send', 'event', 'Diferenciais', 'click', 'Diferenciais');">Diferenciais</a></li>
+									<li><a href="#contato" class="inside" onclick="ga('send', 'event', 'Quero fazer parte', 'click', 'Quero fazer parte');">Quero fazer parte!</a></li>
 								</ul>
 							</div>
 						</nav>
@@ -76,12 +76,12 @@
 			<div class="container">
 				<div class="segura col-lg-12 col-md-12 col-sm-12 col-xs-12 row">
 					<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 row">
-						<a href="https://player.vimeo.com/video/122159832" class="html5lightbox">
+						<a href="https://player.vimeo.com/video/122159832" class="html5lightbox" onclick="ga('send', 'event', 'Vídeo', 'click', 'Vídeo');">
 							<img src="images/video-play.jpg" alt="Assista ao vídeo" title="Assista ao vídeo">
 						</a>
 
 						<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 center">
-							<a href="#contato" class="inside">
+							<a href="#contato" class="inside" onclick="ga('send', 'event', 'Cadastre-se', 'click', 'Cadastre-se');">
 								<img src="images/cad-botao.png" alt="Cadastre-se Grátis" title="Cadastre-se Grátis">
 							</a>
 						</div>
@@ -294,12 +294,12 @@
 			</div>  
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="social-footer">
-                    <a href="http://www.facebook.com/ZeEncontra" target="_blank"><i class="fa icon-facebook wow fadeInLeft"></i></a>
-                    <a href="http://twitter.com/Ze_Encontra" target="_blank"><i class="fa icon-twitter wow fadeInRight"></i></a>
+                    <a href="http://www.facebook.com/ZeEncontra" target="_blank" onclick="ga('send', 'event', 'Facebook', 'click', 'Facebook');"><i class="fa icon-facebook wow fadeInLeft"></i></a>
+                    <a href="http://twitter.com/Ze_Encontra" target="_blank" onclick="ga('send', 'event', 'Twitter', 'click', 'Twitter');"><i class="fa icon-twitter wow fadeInRight"></i></a>
                 </div>                            
             </div>
             <div class="clearfix"></div>
-            <a href="#apresentacao" class="back_top animated inside" title="Voltar ao topo"><i class="icon-up-open"></i></a>                     
+            <a href="#apresentacao" class="back_top animated inside" title="Voltar ao topo" onclick="ga('send', 'event', 'Voltar ao topo', 'click', 'Voltar ao topo');"><i class="icon-up-open"></i></a>                     
         </footer>
 	</div>
 	<script src="js/jquery.js"></script>
@@ -307,9 +307,13 @@
 	<script src="js/vendor.js"></script>
 	<script src="js/owl.carousel.js"></script>
 	<script src="js/main.js"></script>
+	
+	<!-- TWITTER -->
 	<script>
 		window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
 	</script>
+
+	<!-- FACEBOOK -->
 	<script>(function(d, s, id) {
   		var js, fjs = d.getElementsByTagName(s)[0];
 		if (d.getElementById(id)) return;
@@ -319,24 +323,16 @@
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
 
-	<script type="text/javascript">
-$(document).ready(function($) {
+	<!-- ANALYTICS -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-			$("#telas").owlCarousel({
-		navigation : true,
-		slideSpeed : 300,
-		paginationSpeed : 400,
-		pagination: false,
-		autoPlay: false,
-		singleItem:true,
-		navigationText: false,
-		transitionStyle : "fade",
-		lazyLoad : true,
-		mouseDrag: false,
-		touchDrag: false
-  });
+	  ga('create', 'UA-61726445-1', 'auto');
+	  ga('send', 'pageview');
 
-		});
 	</script>
 </body>
 </html>
