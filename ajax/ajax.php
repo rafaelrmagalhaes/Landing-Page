@@ -47,8 +47,9 @@ function formEmail($request, $return)
     if(!empty($email)){
         $return['return'] = true; $return['email'] = $email;
         $result = mysql_query("SELECT email FROM emails WHERE email='".$email."'");
-		if(!$result)
-            enviaEmail("Erro na query que verifica se o email do primeiro form já está salvo no banco.", $return);
+		if(!$result){
+            enviaEmail("Erro na query que verifica se o email do primeiro form já está salvo no banco.", $return, '');
+        }
         $num = mysql_num_rows($result);	
         if($num<=0)
         {
@@ -56,14 +57,13 @@ function formEmail($request, $return)
             $time = date("Y-m-d H:i:s");
             $sql = mysql_query("INSERT INTO emails (id, email, createdAt) VALUES ('".$id."', '".$email."', '".$time."')") or die(mysql_error());
             if(!$sql){
-                enviaEmail("Erro na inserção de dados no primeiro formulário (#form-email).", $return);
+                enviaEmail("Erro na inserção de dados no primeiro formulário (#form-email).", $return, '');
             }
             $id = mysql_query("SELECT id FROM emails WHERE email='".$email."'");
             $id = mysql_fetch_object($id);
             $id = $id->id;
             $return['id'] = $id;
-            $tst = enviaEmail("<center><h3>Valeu por se cadastrar!</h3><p>Aguarde por novidades ;)</p></center>", '', $email);
-            var_dump($tst);
+            enviaEmail("<center><h3>Valeu por se cadastrar!</h3><p>Aguarde por novidades ;)</p></center>", '', $email, '');
             enviaEmail("Mais um cadastro efetuado no ZeEncontra.com. E-mail: ".$email, $return, '');
             echo json_encode($return);
             return json_encode($return);
