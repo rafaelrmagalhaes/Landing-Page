@@ -5,23 +5,28 @@ $return['return'] = false;
 $request = $_REQUEST;
 
 function enviaEmail($msg, $return, $emails){
-    $assunto = "ZeEncontra.com"
-    if(!emails)
+	var_dump($emails);
+    $assunto = "ZeEncontra.com";
+    if($emails === ''){
         $emails = "roboredo.bruno@gmail.com;rafaremagalhaes@gmail.com;contato@zeencontra.com";
-        $assunto = "ERROR";
-    if(!$return)
-        $msg. = "\r\n";
-        $msg. = "Return: \r\n";
+        $assunto = "Mensagem do Site";
+    }
+    var_dump($emails);
+    if($return != ''){
+    	var_dump($return);
+        $msg .= "\r\n";
+        $msg .= "Return: \r\n";
         foreach($return as $r)
         {
-            $msg. = $r."\r\n";
+            $msg .= $r."\r\n";
         }
+    }
     $msg = wordwrap($msg,70);
     $headers = "MIME-Version: 1.1\r\n";
-    $headers .= "Content-type: text/plain; charset=iso-8859-1\r\n";
+    $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
     $headers .= "From: no-reply@zeencontra.com\r\n";
     $headers .= "Return-Path: no-reply@zeencontra.com\r\n";
-    mail($emails, $assunto, $msg, $headers);
+    mail($emails, $assunto, utf8_encode($msg), $headers);
 }
 
 if($request['form'] == 'form-email'){
@@ -42,7 +47,7 @@ function formEmail($request, $return)
     if(!empty($email)){
         $return['return'] = true; $return['email'] = $email;
         $result = mysql_query("SELECT email FROM emails WHERE email='".$email."'");
-        if(!$result)
+		if(!$result)
             enviaEmail("Erro na query que verifica se o email do primeiro form já está salvo no banco.", $return);
         $num = mysql_num_rows($result);	
         if($num<=0)
@@ -50,28 +55,35 @@ function formEmail($request, $return)
             $id = mysql_insert_id();
             $time = date("Y-m-d H:i:s");
             $sql = mysql_query("INSERT INTO emails (id, email, createdAt) VALUES ('".$id."', '".$email."', '".$time."')") or die(mysql_error());
-            if(!sql)
+            if(!$sql){
+            	echo "entrou erro de sql";
                 enviaEmail("Erro na inserção de dados no primeiro formulário (#form-email).", $return);
+            }
+            	echo "NAO entrou erro de sql";
             $id = mysql_query("SELECT id FROM emails WHERE email='".$email."'");
             $id = mysql_fetch_object($id);
             $id = $id->id;
             $return['id'] = $id;
-            enviaEmail("<center><h3>Valeu por se cadastrar!</h3><p>Aguarde por novidades ;)</p></center>", $return, $email);
-            enviaEmail("Mais um cadastro efetuado no ZeEncontra.com. E-mail: ".$email, $return);
+            $tst = enviaEmail("<center><h3>Valeu por se cadastrar!</h3><p>Aguarde por novidades ;)</p></center>", '', $email);
+            var_dump($tst);
+            enviaEmail("Mais um cadastro efetuado no ZeEncontra.com. E-mail: ".$email, $return, '');
             echo json_encode($return);
             return json_encode($return);
         } else {
             $id = mysql_query("SELECT id FROM emails WHERE email='".$email."'");
-            if(!$id)
-                enviaEmail("Erro ao tentar pegar id da tabela emails na function formEmail (primeira função do ajax).", $return);
+            if(!$id){
+                enviaEmail("Erro ao tentar pegar id da tabela emails na function formEmail (primeira função do ajax).", $return, '');
+            }
             $id = mysql_fetch_object($id);
             $id = $id->id;
             $return['id'] = $id;
+            enviaEmail("<center><h3>Valeu por se cadastrar!</h3><p>Aguarde por novidades ;)</p></center>", '', $email);
+            enviaEmail("Um email que já existia foi cadastrado novamente no ZeEncontra.com =) O e-mail é: ".$email, $return, '');
             echo json_encode($return);
             return json_encode($return);
         }
     }else{
-        enviaEmail("Primeiro formulário (#form-email) aceitou passar campo email vazio.", $return);
+        enviaEmail("Primeiro formulário (#form-email) aceitou passar campo email vazio.", $return, '');
         echo json_encode($return);
         return json_encode($return);
     }
@@ -93,8 +105,9 @@ function formMore($request, $return)
             VALUES
             ('".$id."', '".$id_email."', '".utf8_encode($nome)."', '".$telefone."', '".utf8_encode($mensagem)."', '".$time."')")
             or die(mysql_error());
-        if(!sql)
+        if(!$sql){
             enviaEmail("Erro na inserção de dados no segundo formulário (#form-more).", $return);
+        }
         echo json_encode($return);
         return json_encode($return);
     }else{
@@ -113,9 +126,10 @@ function formFriend($request, $return)
         $id = mysql_insert_id();
         $time = date("Y-m-d H:i:s");
         $sql = mysql_query("INSERT INTO friend (id, id_email, email_amigo, createdAt) VALUES ('".$id."', '".$id_email."', '".$email."', '".$time."')") or die(mysql_error());
-        if(!sql)
+        if(!$sql){
             enviaEmail("Erro na inserção de dados no formulário indique (#form-friend).", $return);
-        enviaEmail("<center><h3>Olá!</h3><p>Você foi indicado para conhecer o ZéEncontra.com!</p><p>Acesse <a href='http://www.zeencontra.com' targe='_blank'>CLICANDO AQUI</a> e venda rápido e muito mais!</p></center>", $return, $email);
+        }
+        enviaEmail("<center><h3>Olá!</h3><p>Você foi indicado para conhecer o ZéEncontra.com!</p><p>Acesse <a href='http://www.zeencontra.com' targe='_blank'>CLICANDO AQUI</a> e venda rápido e muito mais!</p></center>", '', $email);
         enviaEmail("Mais um amigo foi indicado no ZeEncontra.com. E-mail do amigo: ".$email, $return);
         echo json_encode($return);
         return json_encode($return);
