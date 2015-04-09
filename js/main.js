@@ -186,7 +186,7 @@ $(document).ready(function($) {
     //***FORM DO AMIGO****//
     $("#form-friend button[type='submit']").on("click", function(){
         var button = $(this);
-        var id_email = $('#form-friend input#id_email').val();
+        var id_email = $('#form-friend input#id_email_indique').val();
         var email = $('#form-friend input#email').val();
         var dados = {
             form: 'form-friend',
@@ -229,7 +229,8 @@ $(document).ready(function($) {
                     return false;
                 }
             },             
-            error: function(error) { 
+            error: function(error) {
+                console.log(error);
                 criaSpan("Ocorreu algum erro.", button);
                 return false;
             },
