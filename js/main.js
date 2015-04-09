@@ -1,5 +1,10 @@
 $(document).ready(function($) {
 
+    //VIDEO
+    if(window.location.hash == "#video"){
+        javascript:html5Lightbox.showLightbox(4, 'https://player.vimeo.com/video/122159832', 'Zé Encontra.com - O melhor preço, sempre!');
+    }
+
     //MASCARA
     $("#telefone").mask("(99)9999-9999?9");
 	
